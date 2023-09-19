@@ -1,7 +1,11 @@
 import Carousel from "./carousel";
 
 function App() {
-  return <Carousel />;
+  return (
+    <>
+      <Carousel />
+    </>
+  );
 }
 
 export default App;
