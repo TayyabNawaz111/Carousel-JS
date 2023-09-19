@@ -1,22 +1,10 @@
 import { useState } from "react";
-
+import "../src/style.css";
 const images = [
-  {
-    url: "https://unsplash.com/photos/a-mountain-range-is-reflected-in-the-still-water-of-a-lake-6EkCaZCuDIc",
-    index: 1,
-  },
-  {
-    url: "https://unsplash.com/photos/a-table-topped-with-two-bowls-of-food-CEJ22E6EXXY",
-    index: 2,
-  },
-  {
-    url: "https://unsplash.com/photos/bEJYDz4cM2I",
-    index: 3,
-  },
-  {
-    url: "https://unsplash.com/photos/anozjF6uqI0",
-    index: 4,
-  },
+  "https://source.unsplash.com/1300x800/?nature",
+  "https://source.unsplash.com/1300x800/?cricket",
+  "https://source.unsplash.com/1300x800/?bat",
+  "https://source.unsplash.com/1300x800/?shopping",
 ];
 
 export default function Carousel() {
@@ -31,10 +19,16 @@ export default function Carousel() {
   };
 
   return (
-    <div>
-      <button onClick={previous}>Previous</button>
-      <img src={images[currentImage].url} />
-      <button onClick={next}>Next</button>
+    <div className="container">
+      <div className="slider">
+        <button className="prev" onClick={previous}>
+          Previous
+        </button>
+        <img src={images[currentImage]} />
+        <button className="next" onClick={next}>
+          Next
+        </button>
+      </div>
     </div>
   );
 }
