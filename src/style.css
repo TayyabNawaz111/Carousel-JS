@@ -10,7 +10,9 @@
 }
 .next,
 .prev {
-  background-color: green;
+  margin: 3px;
+  background-color: black;
+  color: white;
   border-radius: 10px;
 }
 img {
